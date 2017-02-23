@@ -5,12 +5,10 @@ require "terminal-notifier"
 # Set FBO page URL and number of known updates (including Complete View list item)
 url = "https://www.fbo.gov/spg/DON/USMC/Contracts_Office_CTQ8/M67854-17-R-7601A/listing.html"
 known_updates = 5 # Set number of updates we already know about
-
-# Initialize connection to site and create empty updates array
-page = Nokogiri::HTML(open(url))
 updates = []
 
-# Get solicitation name and updates from Nokogiri
+# Create Nokogiri objects
+page = Nokogiri::HTML(open(url))
 solicitation_name = page.css('.agency-header h2').text
 update_list = page.css('ul#sb_related_notices li')
 
