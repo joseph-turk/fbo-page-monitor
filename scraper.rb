@@ -3,8 +3,8 @@ require "nokogiri"
 require "terminal-notifier"
 
 # Set FBO page URL and number of known updates (including Complete View list item)
-url = "https://www.fbo.gov/index?s=opportunity&mode=form&id=31a2dbb659e0f3a01b905822c0c0ae66&tab=core&_cview=1"
-known_updates = 4 # Set number of updates we already know about
+url = "https://www.fbo.gov/spg/DON/USMC/Contracts_Office_CTQ8/M67854-17-R-7601A/listing.html"
+known_updates = 5 # Set number of updates we already know about
 
 # Initialize connection to site and create empty updates array
 page = Nokogiri::HTML(open(url))
